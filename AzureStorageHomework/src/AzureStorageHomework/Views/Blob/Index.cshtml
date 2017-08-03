@@ -1,0 +1,55 @@
+﻿@model AzureStorageHomework.Models.ViewModel.BlobViewModel
+@{
+    ViewData["Title"] = "Blob Page";
+}
+<div class="row">
+    <div class="col-lg-6">
+        <h2>Blob page</h2>
+        <a asp-area="" asp-controller="Blob" asp-action="Create">Upload Blob</a>
+        <div>
+            <table class="table table-filter">
+                <tbody>
+                    @foreach (var item in Model.blobList)
+                    {
+                        <tr>
+                            <td>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <a href="@item.fileURL" target="_blank" class="pull-left">
+                                            @if (item.isImageFile)
+                                            {
+                                                <img src="@item.fileURL" class="media-photo" width="100" height="100">
+                                            }
+                                            else if (item.isTextFile)
+                                            {
+                                                <img src="@Model.DefaultTextFileImage" class="media-photo" width="100" height="100">
+                                            }
+                                            else if (item.isPDFFile)
+                                            {
+                                                <img src="@Model.DefaultPDFFileImage" class="media-photo" width="100" height="100">
+                                            }
+                                            else
+                                            {
+                                                <span>File Link</span>
+                                            }
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-4">
+                                        <a asp-controller="Blob" asp-action="Edit" asp-route-name="@item.fileName">Edit</a> | <a asp-controller="Blob" asp-action="Delete" asp-route-name="@item.fileName">Delete</a>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <strong>Full Path</strong>: @item.fileURL <br />
+                                    <strong>Name</strong>: @item.fileName <br />
+                                    <strong>Container</strong>: @item.Container <br />
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                 </tbody>
+               </table>
+        </div>
+    </div>
+</div>

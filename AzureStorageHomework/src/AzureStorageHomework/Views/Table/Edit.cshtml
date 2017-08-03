@@ -1,0 +1,54 @@
+﻿@using AzureStorageHomework.Models
+@using AzureStorageHomework.Models.Enum
+
+@model EmployeeModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit</title>
+</head>
+<body>
+    <h1>Edit Entry</h1>
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(m => m.Id)
+        <div>
+            @Html.LabelFor(m => m.EmployeeId)
+            @Html.EditorFor(m => m.EmployeeId)
+            @Html.ValidationMessageFor(m => m.EmployeeId)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.FirstName)
+            @Html.EditorFor(m => m.FirstName)
+            @Html.ValidationMessageFor(m => m.FirstName)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.LastName)
+            @Html.EditorFor(m => m.LastName)
+            @Html.ValidationMessageFor(m => m.LastName)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.DateHired)
+            @Html.TextBoxFor(m => m.DateHired, new { @Value = string.Format("{0:MM/dd/yyyy}", Model.DateHired), @class = "datepicker" }) <span style="color:#f00">* MM/dd/yyyy</span>
+            @Html.ValidationMessageFor(m => m.DateHired)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.isActive)
+            @Html.CheckBoxFor(m => m.isActive)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => m.RoleId)
+            @Html.DropDownListFor(m => m.RoleId, Html.GetEnumSelectList(typeof(RoleEnum)))
+            @Html.ValidationMessageFor(m => m.RoleId)
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            @Html.ActionLink("Back to List", "Index", null, htmlAttributes: new { @class = "btn btn-default" })
+        </div>
+    }
+</body>
+</html>
