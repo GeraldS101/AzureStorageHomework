@@ -1,14 +1,15 @@
-﻿-d:DEBUG
+﻿-d:RELEASE
 -d:TRACE
 -d:NETCOREAPP1_0
 -nowarn:CS1701
 -nowarn:CS1702
 -nowarn:CS1705
+-optimize
 -debug:full
 -nostdlib
 -nologo
-"C:\Users\geralds\Documents\Files\Magenic Masters\Microsoft Azure\AzureStorageHomework\AzureStorageHomework\src\AzureStorageHomework\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"C:\Users\geralds\Documents\Files\Magenic Masters\Microsoft Azure\AzureStorageHomework\AzureStorageHomework\src\AzureStorageHomework\bin\Debug\netcoreapp1.0\AzureStorageHomework.dll"
+"C:\Users\geralds\Documents\Files\Magenic Masters\Microsoft Azure\AzureStorageHomework\AzureStorageHomework\src\AzureStorageHomework\obj\Release\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"C:\Users\geralds\Documents\Files\Magenic Masters\Microsoft Azure\AzureStorageHomework\AzureStorageHomework\src\AzureStorageHomework\bin\Release\netcoreapp1.0\AzureStorageHomework.dll"
 -r:"C:\Users\geralds\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.1\lib\netstandard1.3\Microsoft.AspNetCore.Antiforgery.dll"
 -r:"C:\Users\geralds\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authorization.dll"
 -r:"C:\Users\geralds\.nuget\packages\Microsoft.AspNetCore.AzureAppServicesIntegration\1.0.2\lib\netstandard1.3\Microsoft.AspNetCore.AzureAppServicesIntegration.dll"
@@ -202,7 +203,7 @@
 -r:"C:\Users\geralds\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\geralds\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll"
 -r:"C:\Users\geralds\.nuget\packages\WindowsAzure.Storage\8.2.1\lib\netstandard1.3\Microsoft.WindowsAzure.Storage.dll"
--resource:"C:\Users\geralds\Documents\Files\Magenic Masters\Microsoft Azure\AzureStorageHomework\AzureStorageHomework\src\AzureStorageHomework\obj\Debug\netcoreapp1.0\AzureStorageHomeworkdotnet-compile.deps.json",AzureStorageHomework.deps.json
+-resource:"C:\Users\geralds\Documents\Files\Magenic Masters\Microsoft Azure\AzureStorageHomework\AzureStorageHomework\src\AzureStorageHomework\obj\Release\netcoreapp1.0\AzureStorageHomeworkdotnet-compile.deps.json",AzureStorageHomework.deps.json
 "C:\Users\geralds\Documents\Files\Magenic Masters\Microsoft Azure\AzureStorageHomework\AzureStorageHomework\src\AzureStorageHomework\Program.cs"
 "C:\Users\geralds\Documents\Files\Magenic Masters\Microsoft Azure\AzureStorageHomework\AzureStorageHomework\src\AzureStorageHomework\Startup.cs"
 "C:\Users\geralds\Documents\Files\Magenic Masters\Microsoft Azure\AzureStorageHomework\AzureStorageHomework\src\AzureStorageHomework\Controllers\BlobController.cs"

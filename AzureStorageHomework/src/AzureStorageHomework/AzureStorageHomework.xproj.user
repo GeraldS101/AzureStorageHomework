@@ -3,5 +3,6 @@
   <PropertyGroup>
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
     <ShowAllFiles>false</ShowAllFiles>
+    <NameOfLastUsedPublishProfile>geraldsmm - Web Deploy %284%29</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
